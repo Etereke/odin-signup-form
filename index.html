@@ -8,7 +8,55 @@
     <title>Sign-up form</title>
 </head>
 <body>
-    
+    <div class="form-container">
+        <div class="picture-side">
+            <div class="logo">
+                <img src="./img/odin-lined.png" alt="odin logo" height="150rem">
+                <span>ODIN</span>
+            </div>
+            <div class="photo-author">
+                Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/">Unsplash</a>
+            </div>
+        </div>
+        <div class="form-side">
+            <div class="above-form">
+                <p class="upper-para">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span class="italic">now</span> to get started.</p>
+                <p class="upper-para">You <span class="italic">know</span> you want to.</p>
+            </div>
+            <form action="" method="get" id="create-account">
+                <p class="upper-para">Let's do this!</p>
+                
+                <div class="form-row">
+                    <label for="firstname">First name</label>
+                    <input type="text" name="firstname" id="firstname">
+                    <label for="lastname">Last name</label>
+                    <input type="text" name="lastname" id="lastname">
+                </div>
+        
+                <div class="form-row">
+                    <label for="email">e-mail</label>
+                    <input type="email" name="email" id="email">
+                    <label for="phone">phone number</label>
+                    <input type="tel" name="phone" id="phone">
+                </div>
+                
+                <div class="form-row">
+                    <label for="paswword1">password</label>
+                    <input type="paswword" name="paswword1" id="paswword1">
+                    <label for="paswword2">confirm password</label>
+                    <input type="paswword" name="paswword2" id="paswword2">
+                </div>
+            </form>
+                <div class="below-form">
+                    <button form="create-account">Create Account</button>
+                    <p>Already have an account? <a href="#">Log in</a></p>
+                </div>
+        </div>
+    </div>
+
+
+
+
 
     <script src="./script.js"></script>
 </body>
