@@ -16,6 +16,8 @@
 :root{
     --padding-right-form-side: 20%;
     --padding-top-and-bottom: 100px;
+    --bg-color: rgb(240, 240, 240);
+    --leaf-style-color: #596d49;
     box-sizing: border-box;
 }
 
@@ -23,6 +25,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: var(--bg-color);
 }
 .form-container{
     display: flex;
@@ -66,9 +69,10 @@ body{
 }
 .below-form{
     padding: 50px var(--padding-right-form-side) var(--padding-top-and-bottom) 50px;
+    font-size: 17px;
 }
 .below-form, .above-form{
-    background-color: rgb(240, 240, 240);
+    background-color: var(--bg-color);
 }
 
 .upper-para{
@@ -84,15 +88,70 @@ body{
 }
 
 form{
-    width: auto%;
+    width: auto;
     background-color: white;
     padding: 0 0 20px 50px;
-    
+    border-bottom: 1px solid rgb(224, 224, 224);
 }
-
 .form-row{
+    display: flex;
+    flex-direction: row;
     font-family: roboto-bold sans-serif;
     text-transform: uppercase;
     font-size: 0.7rem;
     color: rgb(73, 72, 72);
+    margin-bottom: 15px;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.input-field input{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 5px;
+}
+.input-field input:focus-visible{
+    outline: 1px solid blue;
+}
+
+.below-form button{
+    background-color: var(--leaf-style-color);
+    color: white;
+    font-weight: bold;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 10px;
+}
+.below-form a{
+    color: var(--leaf-style-color);
+    text-decoration: none;
+}
+.error label{
+    color: red;
+}
+.error input{
+    outline: 1px solid red;;
+}
+
+.error::after{
+    content: "* Passwords do not match!";
+    position: absolute;
+    bottom: -20px;
+    font-family:'Times New Roman', Times, serif;
+    color: red;
+    text-transform: none;
+}
+
+.correct input{
+    outline: 1px solid green;
+}
+
+.pw-row{
+    position: relative;
 }
